@@ -19,3 +19,13 @@ li {
   list-style-type: none;
   margin: 10px 3vw 10px 3vw;
 }
+
+@media screen and (max-width:769px) {
+  li {
+    margin: 5px 3vw 5px 3vw;
+  }
+
+  nav {
+    font-size: large;
+  }
+}
