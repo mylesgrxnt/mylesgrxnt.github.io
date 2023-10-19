@@ -10,12 +10,12 @@ nav {
   display: flex;
 
   font-weight: 500;
-  font-size: large;
+  font-size: x-large;
 
   box-shadow: 5px 10px 5px rgb(0,0,0,0.2);
 }
 
 li {
   list-style-type: none;
-  margin: 5px 3vw 5px 3vw;
+  margin: 10px 3vw 10px 3vw;
 }
