@@ -89,7 +89,7 @@
   .about, .recent {
     max-width: none;
     width: 60vw;
-    margin: 2vh 5vw 2vh 5vw ;
+    margin: 2vh 5vw 2vh -5vw ;
   }
 
   .skill_description {
