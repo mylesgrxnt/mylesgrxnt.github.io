@@ -1,22 +1,19 @@
 .project_container {
-  width: 50vw;
-  height: auto;
-  margin: 5vh 0 15vh 40vw;
+  width: 60vw;
+  margin: 15vh 0 5vh 0;
   padding: 20px;
   border-radius: 30px;
-  background-image: linear-gradient(0.25turn,#fbb03b, #f15a24);
-  box-shadow: 5px 10px 5px rgb(0,0,0,0.2);
+  box-shadow: 5px 10px 25px rgb(0, 0, 0, 0.2);
   text-align: center;
 }
 
 .bottom {
   display: flex;
-  background-image: url(../images/bottompagething.png);
-  position: absolute;
-  z-index: -1;
+  height: 100vh;
+  justify-content: center;
   background-size: 100vw;
-  height: auto;
   background-repeat: no-repeat;
+  box-sizing: border-box;
 }
 
 .project_container h2 {
@@ -26,251 +23,26 @@
   font-size: 3vw;
 }
 
-.project_cell_wrapper {
-  display: grid;
-  margin: 0 0 0 3vw;
-  grid-template-columns: 20vw 20vw;
-  grid-gap: 4vw;
-  transition: 0.3s;
+.gallery {
+	padding: 1rem;
+	display: grid;
+	grid-template-columns: repeat(4, 50vw);
+	grid-template-rows: 1fr;
+	column-gap: 0px;
+	row-gap: 1rem;
+	overflow: scroll;
+	height: 60vh;
+	scroll-snap-type: both mandatory;
+	scroll-padding: 1rem;
 }
 
-.project_cell_1, .project_cell_2, .project_cell_3, .project_cell_4, .active_display {
-  border-radius: 30px;
-  box-shadow: 5px 10px 5px rgb(0,0,0,0.2);
-  width: 20vw;
-  height: 20vw;
-  transition: 0.3s;
-  background-size: cover;
-  background-position: center;
+.active {
+	scroll-snap-type: unset;
 }
 
-.project_cell_1 {
-  background-image: url("../images/canvas.jpeg");
-}
-.project_cell_2 {
-  background-image: url("../images/boston_college.jpeg");
-}
-.project_cell_3 {
-  background-image: url("../images/this_site.png");
-  background-position: 20%;
-}
-.project_cell_4 {
-  background-image: url("../images/wordle.png");
-  background-position: 0%;
-}
-
-.project_container img {
-  height: 20vw;
-  width: 20vw;
-  object-fit: cover;
-  border-radius: 30px;
-  transition: 0.3s;
-}
-
-.active_display {
-  font-size: 1.3vw;
-  box-shadow: none;
-  visibility: hidden;
-  transition: 0s;
-  padding: 1vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.active_display h3 {
-  font-size: 1.5vw;
-}
-
-@media screen and (max-width:769px) {
-  .bottom {
-    background-image: none;
-    width: 100vw;
-  }
-  
-  .project_container {
-    width: 80vw;
-    margin-left: 1vw;
-    background-image: none;
-    box-shadow: none;
-  }
-
-  .project_container h2 {
-    font-size: calc(30px + 1vw);
-    margin: 15vh 0 5vh 5vw;
-  }
-
-  .project_cell_wrapper {
-    grid-template-columns: 80vw;
-    margin: none;
-    padding: none;
-    width: 80vw;
-  }
-
-  .project_cell_1, .project_cell_2, .project_cell_3, .project_cell_4 {
-    width: 80vw;
-    height: calc(40vh + 20vw);
-    background-image: none;
-    border:4px dashed #f15a24;
-  }
-
-  .active_display {
-    visibility: visible;
-    font-size: 4vw;
-    width: 80vw;
-    height: calc(40vh + 20vw);
-    padding-left: 5px;
-  }
-
-  .active_display h3 {
-    font-size: 5vw;
-  }
-}
-
-
-
-/* Project cell 1 hover stuff */
-@media screen and (min-width:770px) {
-  .project_cell_wrapper:has(.project_cell_1:hover) {
-    grid-template-columns: 30vw 10vw;
-  }
-  
-  .project_cell_1:hover {
-    width: 30vw;
-    height: 30vw;
-    background: whitesmoke;
-  }
-  
-  .project_cell_1:hover .active_display {
-    width: 28vw;
-    height: 28vw;
-    visibility: visible;
-    transition-delay: 0.5s;
-  }
-  
-  .project_cell_1:hover ~ .project_cell_2 {  
-    width: 10vw;
-    height: 30vw;
-    background: #98002E;
-  }
-  
-  .project_cell_1:hover ~ .project_cell_3 {
-    width: 30vw;
-    height: 10vw;
-    background: whitesmoke;
-  }
-  
-  .project_cell_1:hover ~ .project_cell_4 {
-    width: 10vw;
-    height: 10vw;
-    background: rgb(31, 31, 31);
-  }
-  
-  /* Project cell 2 hover stuff */
-  .project_cell_wrapper:has(.project_cell_2:hover) {
-    grid-template-columns: 10vw 30vw;
-  }
-  
-  .project_cell_2:hover {
-    width: 30vw;
-    height: 30vw;
-    background: whitesmoke;
-  }
-  
-  .project_cell_2:hover .active_display {
-    width: 28vw;
-    height: 28vw;
-    visibility: visible;
-    transition-delay: 0.5s;
-  }
-  
-  .project_cell_1:has(+ .project_cell_2:hover) {  
-    width: 10vw;
-    height: 30vw;
-    background: #FF0000;
-  }
-  
-  .project_cell_2:hover ~ .project_cell_3 {
-    width: 10vw;
-    height: 10vw;
-    background: whitesmoke;
-  }
-  
-  .project_cell_2:hover ~ .project_cell_4 {
-    width: 30vw;
-    height: 10vw;
-    background: rgb(31, 31, 31);
-  }
-  
-  /* Project cell 3 hover stuff */
-  .project_cell_wrapper:has(.project_cell_3:hover) {
-    grid-template-columns: 30vw 10vw;
-  }
-  
-  .project_cell_3:hover {
-    width: 30vw;
-    height: 30vw;
-    background: whitesmoke;
-  }
-  
-  .project_cell_3:hover .active_display {
-    width: 28vw;
-    height: 28vw;
-    visibility: visible;
-    transition-delay: 0.5s;
-  }
-  
-  .project_cell_1:has(+ * + .project_cell_3:hover) {
-    width: 30vw;
-    height: 10vw;
-    background: #FF0000;
-  }
-  
-  .project_cell_2:has(+ .project_cell_3:hover) {
-    width: 10vw;
-    height: 10vw;
-    background: #98002E;
-  }
-  
-  .project_cell_3:hover ~ .project_cell_4 {
-    width: 10vw;
-    height: 30vw;
-    background: rgb(31, 31, 31);
-  }
-  
-  /* Project cell 4 hover stuff */
-  .project_cell_wrapper:has(.project_cell_4:hover) {
-    grid-template-columns: 10vw 30vw;
-  }
-  
-  .project_cell_4:hover .active_display {
-    width: 28vw;
-    height: 28vw;
-    visibility: visible;
-    transition-delay: 0.5s;
-  }
-  
-  .project_cell_4:hover {
-    width: 30vw;
-    height: 30vw;
-    background: whitesmoke;
-  }
-  
-  .project_cell_1:has(+ * + * + .project_cell_4:hover) {
-    width: 10vw;
-    height: 10vw;
-    background: #FF0000;
-  }
-  
-  .project_cell_2:has(+ * + .project_cell_4:hover) {
-    width: 30vw;
-    height: 10vw;
-    background: #98002E;
-  }
-  
-  .project_cell_3:has(+ .project_cell_4:hover) {
-    width: 10vw;
-    height: 30vw;
-    background: whitesmoke;
-  }
+.bottom li {
+	scroll-snap-align: center;
+	display: inline-block;
+	border-radius: 3px;
+	font-size: 0;
 }

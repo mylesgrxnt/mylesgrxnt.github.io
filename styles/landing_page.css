@@ -20,16 +20,30 @@
   padding: 0 0 0 5vw;
 }
 
-.landing_page_image_container {
-  visibility: visible;
+.section .landing_page{
+  position: relative;
+  max-width: 920px;
+  min-height: 75vh;
+  padding: 40px;
+  margin: auto;
+  background-color: #48c9b0;
+  color: #ffffff;
+}
+
+.section .bg-move {
   position: absolute;
-  z-index: -1;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  bottom: 0;
+  height: 100vw;
+  right: auto;
+  width: 100%;
+  background-image: url("../images/landing-thing.png");
+  background-size: cover;
+  background-position: center;
 }
 
 @media screen and (max-width:769px) {
-  .landing_page_image_container {
+  .bg-move {
     visibility: hidden;
   }
 
@@ -47,11 +61,6 @@
     height: 93vh;
     max-width: none;
   }
-}
-
-.landing_page_image_container img {
-  width: 100vw;
-  height: auto;
 }
 
 .arrow_down {

@@ -1,0 +1,53 @@
+{
+  "about": {
+    "occupation": "Computer Science student at Boston College",
+    "address": "7809 Golden Pond Court \nIndianpolis, IN 46278",
+    "phone": "317-832-2121",
+    "email": "mylesmgrant@gmail.com",
+    "github": "github.com/mylesgrxnt",
+    "linkedin": "linkedin.com/in/myles-grant-bccs/"
+  },
+  "news": [
+    {
+      "date": "fall 2023",
+      "description": "Began working at Boston College Makerspace"
+    }, {
+      "date": "fall 2022",
+      "description": "Started working for Boston College Math Department"
+    }, {
+      "date": "fall 2021",
+      "description": "Began attending Boston College"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Frontend Development",
+      "description": "I am familiar with HTML and CSS, and am constantly trying to learn as much as I can about frontend web development, in order to stay up-to-date with modern trends."
+    }, {
+      "name": "Backend Development",
+      "description": "I am using and constantly improving at Django, in order to develop and maintain usable, fast, and secure backend for software applications."
+    }, {
+      "name": "Graphic Design",
+      "description": "I have experience with Adobe Illustrator and Photoshop, and enjoy the intersection of design and functionality as it relates to web development."
+    }
+  ],
+  "projects": [
+    {
+      "title": "GradConnect",
+      "problem": "Problem: High School seniors often have no way to know what to expect for college applications and have no way to get firsthand accounts of what to expect at college.",
+      "solution": "Solution: A full-stack React social media web application that allows high school seniors to connect with college mentors to offer guidance."
+    }, {
+      "title": "Canvas Automated Reminders",
+      "problem": "Problem: Canvas sends out automated email reminders daily for classes and assignments, but not until 6 PM, which is too late to be meaningful.",
+      "solution": "Solution: A custom automated emailing system that makes use of python and the CanvasAPI to send reminders everyday at 8 AM."
+    }, {
+      "title": "Automated BC Health Check",
+      "problem": "Problem: Boston College required a daily questionnaire to use facilities that was time-consuming and easy to forget.",
+      "solution": "Solution: Using python and selenium, wrote a script that I ran each morning (assuming I was in good health), to automate the daily task."
+    }, {
+      "title": "Terminal Wordle",
+      "problem": "Problem: The popular game Wordle requires an internet connection AND a browser to play.",
+      "solution": "Solution: Using Java, get game information in the form of a csv file and create a version of Wordle that is played (in color) in the terminal."
+    }
+  ]
+}
