@@ -31,9 +31,10 @@
 }
 
 .about-image img {
-  height: auto;
+  height: 80%;
   width: 80%;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 .about-me-info {
@@ -49,14 +50,14 @@
   color: white;
   font-size: calc(3vw + 30px);
   position: absolute;
-  margin: 10vh 0 0 10vw;
+  padding: 20px 0 0 10vw;
   text-shadow: rgb(0, 0, 0, 0.5) 5px 5px 15px;
 }
 
 .timeline ul {
   background-image: linear-gradient(0.25turn,#fbb03b, #f15a24);
-  height: 100vh;
-  padding: 100px 0 0 0;
+  height: 85vh;
+  padding: 15vh 0 0 0;
 }
 
 .timeline ul li {
@@ -66,7 +67,6 @@
   margin: 0 auto;
   padding-top: 50px;
   background: #fff;
-  border-radius: 20px;
 }
 
 .timeline ul li::after {
@@ -169,7 +169,7 @@ time {
     width: 250px;
   }
   .timeline ul li:nth-child(even) div {
-    left: -289px;
+    left: -320px;
     /*250+45-6*/
   }
 }
@@ -307,11 +307,28 @@ time {
 /* Responsiveness Stuff */
 
 @media screen and (max-width:769px) {
+  .about-image {
+    display: none;
+  }
+
+  .about-me-info {
+    width: 100%;
+  }
+
+  .about-me-info h2 {
+    font-size: large;
+  }
+
   .info_container {
     flex-direction: column;
     margin-left: 7vw;
     max-width: none;
     width: 80vw;
+    padding-top: 10vh;
+  }
+
+  .skills {
+    margin-top: 30vh;
   }
 
   .skill_description {
@@ -319,7 +336,7 @@ time {
   }
 
   .skill_cell {
-    margin-left: 10vw;
+    margin-left: 5vw;
     max-width: none;
     width: 80vw;
     font-size: 20px;
@@ -336,6 +353,6 @@ time {
   }
 
   .skill_container img {
-    width: 20vw;
+    width: 15vw;
   }
 }
