@@ -42,6 +42,21 @@
   background-position: center;
 }
 
+.arrow_down {
+display: flex;
+justify-content: center;
+}
+
+.arrow_down img {
+  height: 7vh;
+  width: auto;
+}
+
+.arrow_down a:hover {
+  cursor: pointer;
+  box-shadow: none;
+}
+
 @media screen and (max-width:769px) {
   .bg-move {
     visibility: hidden;
@@ -61,19 +76,9 @@
     height: 93vh;
     max-width: none;
   }
-}
 
-.arrow_down {
-display: flex;
-justify-content: center;
-}
-
-.arrow_down img {
-  height: 7vh;
-  width: auto;
-}
-
-.arrow_down a:hover {
-  cursor: pointer;
-  box-shadow: none;
+  .arrow_down {
+    position: relative;
+    bottom: 10vh;
+  }
 }

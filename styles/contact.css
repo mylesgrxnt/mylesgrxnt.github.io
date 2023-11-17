@@ -20,6 +20,10 @@
 
 @media screen and (max-width:1024px) {
   .contact p {
+    font-size: x-small;
+  }
+
+  .contact a {
     font-size: small;
   }
 }
