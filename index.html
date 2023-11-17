@@ -12,106 +12,149 @@
     <link rel="stylesheet" href="styles/landing_page.css">
     <link rel="stylesheet" href="styles/info_section.css">
     <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="styles/contact.css">
     <!-- outside stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- scripts -->
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/background_move.js"></script>
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="larger-screen-header">
         <li><a href="#landing-page">Home</a></li>
         <li><a href="#about-me">About Me</a></li>
+        <li><a href="#recent">Recent</a></li>
         <li><a href="#skill">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="images/resume.pdf">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </nav>
+      <nav class="smaller-screen-header">
+        <div class="dropdown">
+          <button class="dropbtn"><img src="images/menu.png" alt="">
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#landing-page">Home</a>
+            <a href="#about-me">About Me</a>
+            <a href="#recent">Recent</a>
+            <a href="#skill">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
       </nav>
     </header>
-
-    <section id="landing-page" class="landing_page">
-      <div class="introduction animate__animated animate__backInLeft">
-        <h1>Hi there,<br>My name is Myles.</h1>
-        <h3>
-          I'm a Computer Science student at Boston College interested in Web Development and Software Engineering.
-        </h3>
-      </div>
-      <div class="landing_page_image_container">
-        <img src="images/landing-thing.png">
-      </div>
-    </section>
-    <div class="arrow_down">
-      <a class="animate__animated animate__bounce" href="#about-me"><img src="images/downarrow.png"></a>
-    </div>
-
-    <div id="about-me" class="info_container">
-      <section class="about grow">
-        <h2>About Me</h2>
-        <p class="subheader">
-          Computer Science student at Boston College
-        </p>
-        <br>
-        <p>7809 Golden Pond Court <br>
-          Indianpolis, IN 46278
-        </p>
-        <br>
-        <p>
-          Phone: 317-832-2121 <br>
-          Email: grantmx@bc.edu <br>
-          <a href="https://www.github.com/mylesgrxnt"><b>Github</b></a>: github.com/mylesgrxnt <br>
-          <a href="https://www.linkedin.com/in/myles-grant-bccs/"><b>LinkedIn</b></a>: linkedin.com/in/myles-grant-bccs/
-        </p>
+    <main>
+      <!-- <section id="landing-page" class="landing_page section">
+        <div class="introduction animate__animated animate__backInLeft">
+          <h1>Hi there,<br>I'm Myles.</h1>
+          <h3>
+            Computer Science student at Boston College.
+          </h3>
+        </div>
+        <div class="bg-move"></div>
       </section>
-  
-      <section class="recent grow">
-        <h2>Recent News</h2>
-        <p class="subheader">Life Updates<br><br></p>
-        <p>Fall 2023</p>
-        <ul><li>Began working at Boston College Makerspace</li></ul>
-        <p>Fall 2022</p>
-        <ul><li>Started working for Boston College Math Department</li></ul>
-        <p>Fall 2021</p>
-        <ul><li>Began attending Boston College</li></ul>
-      </section>
-    </div>
+      <div class="arrow_down">
+        <a class="animate__animated animate__bounce" href="#about-me"><img src="images/downarrow.png"></a>
+      </div> -->
 
-    <section id="skill" class="skills">
-      <h2><u>My Skills</u></h2>
-      <div class="skill_description">
-        <div class="grow skill_cell">
-          <img src="images/skills_symbols/icons8-frontend-100.png">
-          <h3>Frontend Development</h3>
-          <p>I am familiar with HTML and CSS, and am constantly trying to learn as much as I can about frontend web development, in order to stay up-to-date with modern trends.</p>
+      <!-- <div id="about-me" class="info_container">
+        <section class="about" data-aos="fade-up">
+          <div class="about-image">
+            <img src="https://picsum.photos/1200/1200" alt="">
+          </div>
+          <div class="about-me-info">
+            <h2>
+              I'm a passionate computer science student with a strong interest in the world of software development.
+            </h2>
+            <p>
+              As a lifelong learner and technology enthusiast, I'm always on the lookout for exciting opportunities to apply my skills and knowledge to real-world challenges.
+            </p>
+            <br/>
+            <p>
+              Over the years, I've honed my programming skills in languages like Python, Javascript, HTML, and CSS, and web frameworks such as Django and React. I'm constantly exploring new technologies and languages in order to create applications with real-world uses, and love seeing the ways that emerging technology can empower our lives.
+            </p>
+          </div>
+        </section>
+        <script src="js/section_move.js"></script>
+      </div> -->
+      
+      <!-- <section id="recent" class="timeline">
+        <h1 class="timeline-header">Recent News</h1>
+        <ul>
+          <li>
+            <div>
+              <time>2021</time>
+              <p>Graduated from Brownsburg High School in Brownsburg, Indiana.</p>
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <time>2021</time>
+              <p>Began attending Boston College, majoring in Computer Science.</p>
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <time>2023</time>
+              <p>Started working at Boston College Makerspace.</p>
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <time>2023</time>
+              <p>Participated in HackTheHeights8 Hackathon, and won "Best Overall" and "Best Use of Auth0".</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <script src="js/timeline.js"></script> -->
+
+      <!-- <section id="skill" class="skills">
+        <h2><u>My Skills</u></h2>
+        <div class="skill_description">
+          <div class="grow skill_cell" data-aos="fade-up">
+            <img src="images/skills_symbols/icons8-frontend-100.png">
+            <h3>Frontend Development</h3>
+            <p>I am familiar with HTML, CSS, Javascript, and Bootstrap, and I'm constantly trying to learn as much as I can about frontend web development.</p>
+          </div>
+          <div class="grow skill_cell" data-aos="fade-up">
+            <img src="images/skills_symbols/icons8-backend-100.png">
+            <h3>Backend Development</h3>
+            <p>I am learning and constantly improving at Django and React, in order to develop and maintain usable, fast, and secure backend for software applications.</p>
+          </div>
+          <div class="grow skill_cell" data-aos="fade-up">
+            <img src="images/skills_symbols/icons8-graphic-design-100.png">
+            <h3>Graphic Design</h3>
+            <p>I have experience with Adobe Illustrator and Photoshop, and enjoy the intersection of design and functionality as it relates to web development.</p>
+          </div>
         </div>
-        <div class="grow skill_cell">
-          <img src="images/skills_symbols/icons8-backend-100.png">
-          <h3>Backend Development</h3>
-          <p>I am using and constantly improving at Django, in order to develop and maintain usable, fast, and secure backend for software applications.</p>
+        <div class="skill_container">
+          <div data-aos="fade-right"><img class="grow" src="images/skills_symbols/icons8-python-144.png"></div>
+          <div data-aos="fade-right"><img class="grow" src="images/skills_symbols/icons8-java-144.png"></div>
+          <div data-aos="fade-right"><img class="grow" src="images/skills_symbols/icons8-html5-144.png"></div>
+          <div data-aos="fade-left"><img class="grow" src="images/skills_symbols/icons8-css3-144.png"></div>
+          <div data-aos="fade-left"><img class="grow" src="images/skills_symbols/icons8-django-150.png"></div>
+          <div data-aos="fade-left"><img class="grow" src="images/skills_symbols/icons8-c-programming-144.png"></div>
         </div>
-        <div class="grow skill_cell">
-          <img src="images/skills_symbols/icons8-graphic-design-100.png">
-          <h3>Graphic Design</h3>
-          <p>I have experience with Adobe Illustrator and Photoshop, and enjoy the intersection of design and functionality as it relates to web development.</p>
-        </div>
-      </div>
-      <div class="skill_container">
-        <div><img class="grow" src="images/skills_symbols/icons8-python-144.png"></div>
-        <div><img class="grow" src="images/skills_symbols/icons8-java-144.png"></div>
-        <div><img class="grow" src="images/skills_symbols/icons8-html5-144.png"></div>
-        <div><img class="grow" src="images/skills_symbols/icons8-css3-144.png"></div>
-        <div><img class="grow" src="images/skills_symbols/icons8-django-150.png"></div>
-        <div><img class="grow" src="images/skills_symbols/icons8-c-programming-144.png"></div>
-      </div>
-    </section>
-    
-    <div class="bottom">
-      <section id="projects" class="project_container">
-      <h2>Projects</h2>
-      <div class="project_cell_wrapper">
-      <!-- 4 projects below -->
-        <div class="project_cell_1">
-          <div class="active_display">
+      </section> -->
+      
+      <!-- <div id="projects" class="bottom">
+        <section class="project_container" data-aos="zoom-in">
+        <h2>Projects</h2>
+        <ul class="gallery">
+          <li style="background-color: #FF9997;">
             <h3>Canvas Automated Reminders</h3>
             <br>
             <p>
@@ -119,47 +162,37 @@
               <br><br>Solution: A custom automated emailing system that makes use of python and the CanvasAPI to send reminders everyday at 8 AM.
             </p>
             <br>
-            <a href="https://github.com/mylesgrxnt/canvas-reminder"><b>Check it out here</b></a>
-          </div>
-        </div>
-        <div class="project_cell_2">
-          <div class="active_display">
-            <h3>Automated BC Health Check</h3>
+            <div class="img-and-a-container">
+              <a href="https://github.com/mylesgrxnt/canvas-reminder"><b>Check it out here</b></a>
+            </div>
             <br>
-            <p>
-              Problem: Boston College required a daily questionnaire to use facilities that was time-consuming and easy to forget.
-              <br><br>Solution: Using python and selenium, wrote a script that I ran each morning (assuming I was in good health), to automate the daily task.
-            </p>
-            <br>
-            <a href="https://github.com/mylesgrxnt/BCCheck"><b>Check it out here</b></a>
-          </div>
-        </div>
-        <div class="project_cell_3">
-          <div class="active_display">
-            <h3>Portfolio Website</h3>
-            <br>
-            <p>
-              Problem: I needed a responsive website to show off all the work I've done!
-              <br><br>Solution: Build a webite from scratch using HTML5 and CSS3.
-            </p>
-            <br>
-            <a href="https://github.com/mylesgrxnt/mylesgrxnt.github.io"><b>Check it out here</b></a>
-          </div>
-        </div>
-        <div class="project_cell_4">
-          <div class="active_display">
-            <h3>Terminal Wordle</h3>
-            <br>
-            <p>
-              Problem: The popular game Wordle requires an internet connection AND a browser to play.
-              <br><br>Solution: Using Java, get game information in the form of a csv file and create a version of Wordle that is played (in color) in the terminal.
-            </p>
-            <br>
-            <a href="https://github.com/mylesgrxnt/TerminalWordle"><b>Check it out here</b></a>
-          </div>
-        </div>
-      </div>
-    </section>
-    </div>
+            <div class="img-and-a-container">
+              <img src="images/canvas.jpeg" alt="Canvas Reminder">
+            </div>
+          </li>
+          <li style="background: #f7ede2;">
+            
+          </li>
+          <li style="background: #f5cac3;">
+            
+          </li>
+          <li style="background: #84a59d;">
+            
+          </li>
+        </ul>
+        </section>
+      </div> -->
+
+      <!-- <div id="contact" class="contact">
+          <p>
+            Phone: 317-832-2121
+          </p>
+          <p>
+            Email: grantmx@bc.edu
+          </p><p><a href="images/resume.pdf">My Resume</a></p>
+          <p><a href="https://www.github.com/mylesgrxnt"><b>Github</b></a>: github.com/mylesgrxnt</p>
+          <p><a href="https://www.linkedin.com/in/myles-grant-bccs/"><b>LinkedIn</b></a>: linkedin.com/in/myles-grant-bccs/</p>
+      </div> -->
+    </main>
   </body>
 </html>
