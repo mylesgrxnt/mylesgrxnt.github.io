@@ -73,7 +73,7 @@
 
 @media screen and (max-width:769px) {
   .bottom {
-    margin-top: 20vh;
+    margin-top: calc(20vh + 50px);
   }
 
   .bottom img {

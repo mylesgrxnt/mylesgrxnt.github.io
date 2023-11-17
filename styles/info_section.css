@@ -307,6 +307,13 @@ time {
 /* Responsiveness Stuff */
 
 @media screen and (max-width:769px) {
+
+  @media screen and (max-height:740px){
+    .timeline ul {
+      height: calc(85vh + 75px);
+    }
+  }
+
   .about-image {
     display: none;
   }
@@ -321,7 +328,7 @@ time {
 
   .info_container {
     flex-direction: column;
-    margin-left: 7vw;
+    margin-left: 5vw;
     max-width: none;
     width: 80vw;
     padding-top: 10vh;
