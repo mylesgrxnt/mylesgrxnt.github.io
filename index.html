@@ -23,12 +23,11 @@
     <!-- scripts -->
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script type="module" src="index.js" defer></script>
     <script src="components/background_move.js"></script>
   </head>
   <body>
     <header>
-      <!-- <nav class="larger-screen-header">
+      <nav class="larger-screen-header">
         <li><a href="#landing-page">Home</a></li>
         <li><a href="#about-me">About Me</a></li>
         <li><a href="#recent">Recent</a></li>
@@ -50,26 +49,25 @@
             <a href="#contact">Contact</a>
           </div>
         </div>
-      </nav> -->
+      </nav>
     </header>
     <main>
-      <!-- <section id="landing-page" class="landing_page section">
+      <section id="landing-page" class="landing_page section">
         <div class="introduction animate__animated animate__backInLeft">
           <h1>Hi there,<br>I'm Myles.</h1>
           <h3>
-            Computer Science student at Boston College.
+            "Computer Science student at Boston College"
           </h3>
         </div>
         <div class="bg-move"></div>
       </section>
       <div class="arrow_down">
         <a class="animate__animated animate__bounce" href="#about-me"><img src="images/downarrow.png"></a>
-      </div> -->
-
-      <!-- <div id="about-me" class="info_container">
+      </div>
+      <div id="about-me" class="info_container">
         <section class="about" data-aos="fade-up">
           <div class="about-image">
-            <img src="https://picsum.photos/1200/1200" alt="">
+            <img src="images/IMG_1635.jpeg" alt="">
           </div>
           <div class="about-me-info">
             <h2>
@@ -84,60 +82,38 @@
             </p>
           </div>
         </section>
-        <script src="js/section_move.js"></script>
-      </div> -->
+        <script src="components/section_move.js"></script>
+      </div>
       
-      <!-- <section id="recent" class="timeline">
+      <section id="recent" class="timeline">
         <h1 class="timeline-header">Recent News</h1>
-        <ul>
+        <ul class="news_list">
           <li>
             <div>
-              <time>2021</time>
-              <p>Graduated from Brownsburg High School in Brownsburg, Indiana.</p>
-            </div>
-          </li>
-
-          <li>
-            <div>
-              <time>2021</time>
-              <p>Began attending Boston College, majoring in Computer Science.</p>
-            </div>
-          </li>
-
-          <li>
-            <div>
-              <time>2023</time>
-              <p>Started working at Boston College Makerspace.</p>
-            </div>
-          </li>
-
-          <li>
-            <div>
-              <time>2023</time>
-              <p>Participated in HackTheHeights8 Hackathon, and won "Best Overall" and "Best Use of Auth0".</p>
+              <b><time>${event.date}</time></b>
+              <p>${event.description}</p>
             </div>
           </li>
         </ul>
       </section>
-      <script src="js/timeline.js"></script> -->
 
-      <!-- <section id="skill" class="skills">
+      <section id="skill" class="skills">
         <h2><u>My Skills</u></h2>
         <div class="skill_description">
           <div class="grow skill_cell" data-aos="fade-up">
             <img src="images/skills_symbols/icons8-frontend-100.png">
-            <h3>Frontend Development</h3>
-            <p>I am familiar with HTML, CSS, Javascript, and Bootstrap, and I'm constantly trying to learn as much as I can about frontend web development.</p>
+            <h3>${skills[0].name}</h3>
+            <p>${skills[0].description}</p>
           </div>
           <div class="grow skill_cell" data-aos="fade-up">
             <img src="images/skills_symbols/icons8-backend-100.png">
-            <h3>Backend Development</h3>
-            <p>I am learning and constantly improving at Django and React, in order to develop and maintain usable, fast, and secure backend for software applications.</p>
+            <h3>${skills[1].name}</h3>
+            <p>${skills[1].description}</p>
           </div>
           <div class="grow skill_cell" data-aos="fade-up">
             <img src="images/skills_symbols/icons8-graphic-design-100.png">
-            <h3>Graphic Design</h3>
-            <p>I have experience with Adobe Illustrator and Photoshop, and enjoy the intersection of design and functionality as it relates to web development.</p>
+            <h3>${skills[2].name}</h3>
+            <p>${skills[2].description}</p>
           </div>
         </div>
         <div class="skill_container">
@@ -148,51 +124,42 @@
           <div data-aos="fade-left"><img class="grow" src="images/skills_symbols/icons8-django-150.png"></div>
           <div data-aos="fade-left"><img class="grow" src="images/skills_symbols/icons8-c-programming-144.png"></div>
         </div>
-      </section> -->
+      </section>
       
-      <!-- <div id="projects" class="bottom">
+      <div id="projects" class="bottom">
         <section class="project_container" data-aos="zoom-in">
         <h2>Projects</h2>
         <ul class="gallery">
-          <li style="background-color: #FF9997;">
-            <h3>Canvas Automated Reminders</h3>
+          <li style="background-color: #FFF;">
+            <h3>${instance.title}</h3>
             <br>
             <p>
-              Problem: Canvas sends out automated email reminders daily for classes and assignments, but not until 6 PM, which is too late to be meaningful.
-              <br><br>Solution: A custom automated emailing system that makes use of python and the CanvasAPI to send reminders everyday at 8 AM.
+              ${instance.problem}
+              <br><br>${instance.solution}
             </p>
             <br>
             <div class="img-and-a-container">
-              <a href="https://github.com/mylesgrxnt/canvas-reminder"><b>Check it out here</b></a>
+              <a href="${instance.link}"><b>Check it out here</b></a>
             </div>
             <br>
             <div class="img-and-a-container">
-              <img src="images/canvas.jpeg" alt="Canvas Reminder">
+              <img src="${instance.image}" alt="Canvas Reminder">
             </div>
-          </li>
-          <li style="background: #f7ede2;">
-            
-          </li>
-          <li style="background: #f5cac3;">
-            
-          </li>
-          <li style="background: #84a59d;">
-            
           </li>
         </ul>
         </section>
-      </div> -->
+      </div>
 
-      <!-- <div id="contact" class="contact">
-          <p>
-            Phone: 317-832-2121
-          </p>
-          <p>
-            Email: grantmx@bc.edu
-          </p><p><a href="images/resume.pdf">My Resume</a></p>
-          <p><a href="https://www.github.com/mylesgrxnt"><b>Github</b></a>: github.com/mylesgrxnt</p>
-          <p><a href="https://www.linkedin.com/in/myles-grant-bccs/"><b>LinkedIn</b></a>: linkedin.com/in/myles-grant-bccs/</p>
-      </div> -->
+      <div id="contact" class="contact">
+        <p>
+          Phone: ${contact.phone}
+        </p>
+        <p>
+          Email: ${contact.email}
+        </p><p><a href="images/resume.pdf">Resume</a></p>
+        <p><a href="https://www.github.com/mylesgrxnt"><b>Github</b></a></p>
+        <p><a href="https://www.linkedin.com/in/myles-grant-bccs/"><b>LinkedIn</b></a></p>
+      </div>
     </main>
   </body>
 </html>
