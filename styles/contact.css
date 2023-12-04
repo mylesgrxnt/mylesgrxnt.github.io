@@ -1,0 +1,29 @@
+.contact {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  padding-bottom: 2vh;
+  background-image: linear-gradient(0.25turn,#fbb03b, #f15a24);
+}
+
+.contact p {
+  margin-top: 2vw;
+  font-weight: 500;
+  padding: 0 2vw 0 2vw;
+  font-size: medium;
+  text-align: center;
+}
+
+.contact a {
+  color: whitesmoke;
+}
+
+@media screen and (max-width:1024px) {
+  .contact p {
+    font-size: x-small;
+  }
+
+  .contact a {
+    font-size: small;
+  }
+}
