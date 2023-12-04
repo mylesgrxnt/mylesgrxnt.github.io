@@ -16,6 +16,7 @@
     <!-- outside stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +25,7 @@
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="components/background_move.js"></script>
+    <script>AOS.init();</script>
   </head>
   <body>
     <header>
@@ -56,7 +58,7 @@
         <div class="introduction animate__animated animate__backInLeft">
           <h1>Hi there,<br>I'm Myles.</h1>
           <h3>
-            "Computer Science student at Boston College"
+            Computer Science student at Boston College
           </h3>
         </div>
         <div class="bg-move"></div>
@@ -85,16 +87,8 @@
         <script src="components/section_move.js"></script>
       </div>
       
-      <section id="recent" class="timeline">
-        <h1 class="timeline-header">Recent News</h1>
-        <ul class="news_list">
-          <li>
-            <div>
-              <b><time>${event.date}</time></b>
-              <p>${event.description}</p>
-            </div>
-          </li>
-        </ul>
+      <section id="recent" class="recent">
+        
       </section>
 
       <section id="skill" class="skills">
@@ -102,27 +96,29 @@
         <div class="skill_description">
           <div class="grow skill_cell" data-aos="fade-up">
             <img src="images/skills_symbols/icons8-frontend-100.png">
-            <h3>${skills[0].name}</h3>
-            <p>${skills[0].description}</p>
+            <h3>Frontend Development</h3>
+            <p>I am familiar with HTML, CSS, Javascript, and Bootstrap, and I'm constantly trying to learn as much as I can about frontend web development.</p>
           </div>
           <div class="grow skill_cell" data-aos="fade-up">
             <img src="images/skills_symbols/icons8-backend-100.png">
-            <h3>${skills[1].name}</h3>
-            <p>${skills[1].description}</p>
+            <h3>Backend Development</h3>
+            <p>I am learning and constantly improving at Django and React, in order to develop and maintain usable, fast, and secure backend for software applications.</p>
           </div>
           <div class="grow skill_cell" data-aos="fade-up">
             <img src="images/skills_symbols/icons8-graphic-design-100.png">
-            <h3>${skills[2].name}</h3>
-            <p>${skills[2].description}</p>
+            <h3>Graphic Design</h3>
+            <p>I have experience with Adobe Illustrator and Photoshop, and enjoy the intersection of design and functionality as it relates to web development.</p>
           </div>
         </div>
         <div class="skill_container">
           <div data-aos="fade-right"><img class="grow" src="images/skills_symbols/icons8-python-144.png"></div>
           <div data-aos="fade-right"><img class="grow" src="images/skills_symbols/icons8-java-144.png"></div>
           <div data-aos="fade-right"><img class="grow" src="images/skills_symbols/icons8-html5-144.png"></div>
-          <div data-aos="fade-left"><img class="grow" src="images/skills_symbols/icons8-css3-144.png"></div>
+          <div data-aos="fade-right"><img class="grow" src="images/skills_symbols/icons8-css3-144.png"></div>
           <div data-aos="fade-left"><img class="grow" src="images/skills_symbols/icons8-django-150.png"></div>
-          <div data-aos="fade-left"><img class="grow" src="images/skills_symbols/icons8-c-programming-144.png"></div>
+          <div data-aos="fade-left"><img class="grow" src="images/skills_symbols/React-icon.png"></div>
+          <div data-aos="fade-left"><img class="grow" src="images/skills_symbols/js.webp"></div>
+          <div data-aos="fade-left"><img class="grow" src="images/skills_symbols/bootstrap.png"></div>
         </div>
       </section>
       
@@ -131,19 +127,67 @@
         <h2>Projects</h2>
         <ul class="gallery">
           <li style="background-color: #FFF;">
-            <h3>${instance.title}</h3>
+            <h3>EagleVision</h3>
             <br>
             <p>
-              ${instance.problem}
-              <br><br>${instance.solution}
+              Problem: Course reigstration is a nightmare for college students, and knowing when classes have spots open up is a guess-and-check process.
+              <br><br>Solution: EagleVision is a Django web-app that uses the EagleApp API to allow students from Boston College to set course watchesa and receive notifications about courses.
             </p>
             <br>
             <div class="img-and-a-container">
-              <a href="${instance.link}"><b>Check it out here</b></a>
+              <a href="https://github.com/mylesgrxnt/"><b>Check it out here</b></a>
             </div>
             <br>
             <div class="img-and-a-container">
-              <img src="${instance.image}" alt="Canvas Reminder">
+              <img src="images/EagleVision.png" alt="">
+            </div>
+          </li>
+          <li style="background-color: #FFF;">
+            <h3>GradConnect</h3>
+            <br>
+            <p>
+              Problem: High School seniors often have no way to know what to expect for college applications and have no way to get firsthand accounts of what to expect at college.
+              <br><br>Solution: A full-stack React social media web application that allows high school seniors to connect with college mentors to offer guidance.
+            </p>
+            <br>
+            <div class="img-and-a-container">
+              <a href="https://github.com/mylesgrxnt/GradConnect"><b>Check it out here</b></a>
+            </div>
+            <br>
+            <div class="img-and-a-container">
+              <img src="images/GradConnect.png" alt="">
+            </div>
+          </li>
+          <li style="background-color: #FFF;">
+            <h3>Automated Canvas Reminder</h3>
+            <br>
+            <p>
+              Problem: Canvas sends out automated email reminders daily for classes and assignments, but not until 6 PM, which is too late to be meaningful.
+              <br><br>Solution: A custom automated emailing system that makes use of python and the CanvasAPI to send reminders everyday at 8 AM.
+            </p>
+            <br>
+            <div class="img-and-a-container">
+              <a href="https://github.com/mylesgrxnt/canvas-reminder"><b>Check it out here</b></a>
+            </div>
+            <br>
+            <div class="img-and-a-container">
+              <img src="images/canvas.jpeg" alt="">
+            </div>
+          </li>
+          <li style="background-color: #FFF;">
+            <h3>Terminal Wordle</h3>
+            <br>
+            <p>
+              Problem: The popular game Wordle requires an internet connection AND a browser to play.
+              <br><br>Solution: Using Java, get game information in the form of a csv file and create a version of Wordle that is played (in color) in the terminal.
+            </p>
+            <br>
+            <div class="img-and-a-container">
+              <a href="https://github.com/mylesgrxnt/TerminalWordle"><b>Check it out here</b></a>
+            </div>
+            <br>
+            <div class="img-and-a-container">
+              <img src="images/wordle.png" alt="">
             </div>
           </li>
         </ul>
@@ -152,10 +196,10 @@
 
       <div id="contact" class="contact">
         <p>
-          Phone: ${contact.phone}
+          Phone: 317-832-2121
         </p>
         <p>
-          Email: ${contact.email}
+          Email: mylesmgrant@gmail.com
         </p><p><a href="images/resume.pdf">Resume</a></p>
         <p><a href="https://www.github.com/mylesgrxnt"><b>Github</b></a></p>
         <p><a href="https://www.linkedin.com/in/myles-grant-bccs/"><b>LinkedIn</b></a></p>
