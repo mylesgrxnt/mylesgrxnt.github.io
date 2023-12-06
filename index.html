@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="styles/info_section.css">
     <link rel="stylesheet" href="styles/projects.css">
     <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/timeline.css">
     <!-- outside stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
@@ -24,8 +25,8 @@
     <!-- scripts -->
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://threejs.org/build/three.js"></script>
     <script src="components/background_move.js"></script>
-    <script>AOS.init();</script>
   </head>
   <body>
     <header>
@@ -55,6 +56,7 @@
     </header>
     <main>
       <section id="landing-page" class="landing_page section">
+        <script>AOS.init();</script>
         <div class="introduction animate__animated animate__backInLeft">
           <h1>Hi there,<br>I'm Myles.</h1>
           <h3>
@@ -86,10 +88,43 @@
         </section>
         <script src="components/section_move.js"></script>
       </div>
-      
-      <section id="recent" class="recent">
-        
+
+      <section class="recent" id="recent">
+        <div>
+          <h1>Recent News</h1>
+          <div class="card-container" data-aos="fade-right">
+            <div class="card">
+              <div class="container">
+                <h4><b>Summer 2024</b></h4>
+                <p>Beginning software internship with Allied Solutions in Carmel, IN.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="container">
+                <h4><b>Fall 2023</b></h4>
+                <p>Participated in HackTheHeights8 Hackathon, and won 'Best Overall' and 'Best Use of Auth0'.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="container">
+                <h4><b>Fall 2023</b></h4>
+                <p>Began working on Eaglevision alongside my software engineering team, in order to help aid the Course Registration process for undergrad BC students.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="container">
+                <h4><b>Summer 2023</b></h4>
+                <p>Started working at Boston College Makerspace as a member of the electronics tool team.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="threeD-container"></div>
       </section>
+
+      <script src="components/three.r134.min.js"></script>
+      <script src="components/vanta.fog.min.js"></script>
+      <script src="components/background.js"></script>
 
       <section id="skill" class="skills">
         <h2><u>My Skills</u></h2>

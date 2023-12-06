@@ -102,12 +102,6 @@
 
 @media screen and (max-width:769px) {
 
-  @media screen and (max-height:740px){
-    .timeline ul {
-      height: calc(85vh + 75px);
-    }
-  }
-
   .about-image {
     display: none;
   }
