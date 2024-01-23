@@ -47,3 +47,33 @@
     width: 100%;
     height: 100%;
 }
+
+@media screen and (max-width:769px) {
+    .recent {
+        height: auto;
+    }
+
+    .card-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .recent h1 {
+        padding-top: 0;
+        font-size: 30px;
+    }
+
+    .card {
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    .card h4 {
+        font-size: medium;
+    }
+
+    .card p {
+        font-size: small;
+    }
+}
