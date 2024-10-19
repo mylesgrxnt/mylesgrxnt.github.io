@@ -31,7 +31,7 @@
 .gallery {
 	padding: 20px;
 	display: grid;
-	grid-template-columns: repeat(4, 50vw);
+	grid-template-columns: repeat(5, 50vw);
 	grid-template-rows: 1fr;
 	column-gap: 0px;
 	row-gap: 1rem;
@@ -89,6 +89,6 @@
   }
 
   .gallery {
-    grid-template-columns: repeat(4, 80vw);
+    grid-template-columns: repeat(5, 80vw);
   }
 }

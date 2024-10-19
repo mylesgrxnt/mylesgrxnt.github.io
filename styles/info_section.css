@@ -142,13 +142,6 @@
   }
 
   .skill_container {
-    display: grid;
-    grid-template-columns: 18vw 18vw 18vw 18vw;
-    grid-gap: 2vh;
-  }
-
-  .skill_container img {
-    height: 18vw;
-    width: 18vw;
+    display: none;
   }
 }
