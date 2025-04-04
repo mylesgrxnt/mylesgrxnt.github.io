@@ -68,10 +68,8 @@
   height: 10vw;
   object-fit: cover;
   border-radius: 50%;
-  border-width: 3px;
-  border-style: dashed;
-  border-color: #f15a24;
-  box-shadow: 5px 10px 25px rgb(0, 0, 0, 0.2);
+
+  box-shadow: 0px 0px 25px rgb(241, 90, 36, 0.4);
 }
 
 .skill_description {
