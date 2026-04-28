@@ -83,7 +83,7 @@ img {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10006;
+  z-index: 10022;
   padding: 0.75rem var(--space);
   padding-top: max(0.75rem, env(safe-area-inset-top));
   background: linear-gradient(to bottom, rgba(250, 246, 241, 0.94), rgba(250, 246, 241, 0.65));
@@ -134,14 +134,10 @@ img {
   color: var(--text);
 }
 
-/* Full-screen mobile menu (outside header — fixed descendants use the viewport correctly). */
+/* Mobile menu: outside header — no transitions (reliable cross-browser / hosting). */
 
 .nav-mobile-backdrop {
   display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 10004;
-  background: var(--bg-deep);
 }
 
 .nav-mobile {
@@ -149,69 +145,51 @@ img {
 }
 
 @media (max-width: 767.98px) {
-  /* Backdrop fades in; stays in the tree so transitions run (no display toggling). */
   .nav-mobile-backdrop {
-    display: block;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition:
-      opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1),
-      visibility 0.4s;
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10020;
+    background: rgba(58, 54, 50, 0.35);
   }
 
   body.mobile-menu-open .nav-mobile-backdrop {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+    display: block;
   }
 
-  /* Outer holds the sheet paint + animation; passes pointer-events to backdrop except on .nav-mobile-inner links. */
   .nav-mobile {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    visibility: hidden;
-    pointer-events: none;
+    box-sizing: border-box;
+    display: none;
     position: fixed;
     left: 0;
     right: 0;
-    top: calc(4rem + env(safe-area-inset-top, 0px));
+    top: calc(3.5rem + env(safe-area-inset-top, 0px));
     bottom: 0;
-    z-index: 10005;
-    gap: 0;
+    z-index: 10021;
+    flex-direction: column;
+    align-items: stretch;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
     background: var(--bg-card);
     border-top: 1px solid var(--stroke);
-    box-shadow: var(--shadow-sm);
-    transform: translate3d(0, -104%, 0);
-    opacity: 0;
-    transition:
-      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-      opacity 0.38s cubic-bezier(0.22, 1, 0.36, 1),
-      visibility 0.45s;
+    box-shadow: var(--shadow-md);
+  }
+
+  body.mobile-menu-open .nav-mobile {
+    display: flex;
   }
 
   .nav-mobile-inner {
-    pointer-events: auto;
-    flex: 0 1 auto;
-    max-height: 100%;
+    flex: 1;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     display: flex;
     flex-direction: column;
     gap: 0;
-    padding-top: 1rem;
+    padding-top: 0.75rem;
     padding-bottom: max(1.25rem, env(safe-area-inset-bottom));
     padding-inline: max(var(--space), env(safe-area-inset-left)) max(var(--space), env(safe-area-inset-right));
-  }
-
-  body.mobile-menu-open .nav-mobile {
-    visibility: visible;
-    pointer-events: none;
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
   }
 }
 
@@ -237,7 +215,6 @@ img {
   height: 2px;
   background: var(--text);
   position: relative;
-  transition: transform 0.25s;
 }
 
 .menu-toggle span::before,
@@ -248,7 +225,6 @@ img {
   width: 100%;
   height: 2px;
   background: var(--text);
-  transition: transform 0.25s, top 0.25s;
 }
 
 .menu-toggle span::before {
@@ -308,14 +284,6 @@ body.mobile-menu-open .site-header .menu-toggle span::after {
 
   body.mobile-menu-open {
     overflow: auto !important;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .nav-mobile-backdrop,
-  .nav-mobile {
-    transition-duration: 0.01ms !important;
-    transition-delay: 0ms !important;
   }
 }
 

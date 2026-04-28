@@ -12,9 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/site.css">
+    <link rel="stylesheet" href="/styles/site.css">
 
-    <script src="components/site.js" defer></script>
+    <script src="/components/site.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -36,10 +36,8 @@
         </nav>
       </div>
     </header>
-    <!-- Fixed overlays live outside header so viewport positioning is correct (ancestor backdrop-filter would trap fixed descendants). -->
     <div id="nav-mobile-backdrop" class="nav-mobile-backdrop" aria-hidden="true"></div>
     <div id="mobile-nav" class="nav-mobile" aria-hidden="true">
-      <!-- Inner catches taps/links; outer sheet is pointer-transparent so taps fall through to the backdrop -->
       <div class="nav-mobile-inner">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
@@ -273,7 +271,7 @@
                   height="315"
                   loading="lazy"
                   src="https://www.youtube.com/embed/4bXNOEbDKeA?start=247&amp;end=275"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen
                 ></iframe>
