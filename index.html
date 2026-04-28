@@ -1,259 +1,365 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- stylesheets -->
-    <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/landing_page.css">
-    <link rel="stylesheet" href="styles/info_section.css">
-    <link rel="stylesheet" href="styles/projects.css">
-    <link rel="stylesheet" href="styles/contact.css">
-    <link rel="stylesheet" href="styles/timeline.css">
-    <!-- favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
-    <!-- outside stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- font -->
+    <title>Myles Grant — Software Engineer</title>
+    <meta name="theme-color" content="#faf6f1">
+    <meta name="description" content="Myles Grant — junior software engineer at Allied Solutions (Carmel, IN). Boston College Computer Science (2025). .NET &amp; AWS, software testing, Python/Django experience, Swift and research interests.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- scripts -->
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="components/background_move.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/site.css">
+
+    <script src="components/site.js" defer></script>
   </head>
   <body>
-    <header>
-      <nav class="larger-screen-header">
-        <li><a href="#landing-page">Home</a></li>
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#recent">Recent</a></li>
-        <li><a href="#skill">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </nav>
-      <nav class="smaller-screen-header">
-        <div class="dropdown">
-          <button class="dropbtn"><img src="images/menu.png" alt="">
-            <i class="fa fa-caret-down"></i>
+    <header class="site-header">
+      <div class="nav-inner">
+        <a class="logo" href="#top">MG</a>
+
+        <nav aria-label="Primary">
+          <ul class="nav-desktop">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#highlights">Highlights</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+            <span aria-hidden="true"></span>
           </button>
-          <div class="dropdown-content">
-            <a href="#landing-page">Home</a>
-            <a href="#about-me">About Me</a>
-            <a href="#recent">Recent</a>
-            <a href="#skill">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
+      <div id="mobile-nav" class="nav-mobile" aria-hidden="true">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
     </header>
-    <main>
-      <section id="landing-page" class="landing_page section">
-        <script>AOS.init();</script>
-        <div class="introduction animate__animated animate__backInLeft">
-          <h1>Hi there,<br>I'm Myles.</h1>
-          <h3>
-            Junior Software Engineer at Allied Solutions
-          </h3>
-        </div>
-        <div class="bg-move"></div>
-      </section>
-      <div class="arrow_down">
-        <a class="animate__animated animate__bounce" href="#about-me"><img src="images/downarrow.png"></a>
-      </div>
-      <div id="about-me" class="info_container">
-        <section class="about" data-aos="fade-up">
-          <div class="about-image">
-            <img src="images/IMG_6049.jpg" alt="">
-          </div>
-          <div class="about-me-info">
-            <h2>
-              I'm a passionate Junior Software Engineer with a focus on problem-solving.
-            </h2>
-            <p>
-              Hi! I am a Junior Software Engineer at Allied Solutions, with a growing interest in data science and creating user-friendly and thoughtful frontends. I enjoy exploring how data can reveal insights and solve real-world problems, whether it's analyzing complex datasets, building machine learning models, or developing data-driven applications. I especially love investigating the intersection of Data Science and Stellar Astronomy, as leveraging modern technologies to understand mechanisms that are billions of years old is mind-blowing!
-            </p>
-            <br/>
-            <p>I'm always eager to take on new challenges and expand my skill set. Feel free to connect if you're a Boston College alumni or interested in discussing data science, machine learning, or anything related to astronomy!</p>
-          </div>          
-        </section>
-        <script src="components/section_move.js"></script>
-      </div>
 
-      <section class="recent" id="recent">
-        <div>
-          <h1>Recent News</h1>
-          <div class="card-container" data-aos="fade-right">
-            <div class="card">
-              <div class="container">
-                <h4>💻 Coding at Allied Solutions</h4>
-                <p>Working as a Junior Software Engineer at Allied Solutions in order to hone in my skills and learn every day!</p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="container">
-                <h4>🚀 Just wrapped up my final semester!</h4>
-                <p>Countless lines of code, late-night debugging sessions, and coffee-fueled problem-solving have led to this moment.</p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="container">
-                <h4>📊 Exploring data science in-depth</h4>
-                <p>Diving into machine learning, data visualization, and big data analysis to uncover meaningful insights from complex datasets.</p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="container">
-                <h4>🔭 Deep-diving into computational astrophysics</h4>
-                <p>Blending my love for astronomy with data science, because space is just too cool to ignore!</p>
-              </div>
-            </div>
+    <main id="top">
+      <section id="landing" class="hero" aria-label="Introduction">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-blob hero-blob--1" aria-hidden="true"></div>
+        <div class="hero-blob hero-blob--2" aria-hidden="true"></div>
+        <div class="hero-pattern" aria-hidden="true"></div>
+        <div class="hero-content wrap">
+          <p class="hero-eyebrow">Portfolio</p>
+          <h1 class="hero-title">Hi — I&apos;m <span class="hero-name">Myles Grant</span></h1>
+          <p class="hero-sub">Junior Software Engineer — Allied Solutions, Carmel, IN</p>
+          <p class="hero-lede">
+            I focus on backend engineering in C# and .NET on AWS. Earlier experience includes Django and PostgreSQL with Boston College ITS,
+            automated testing during my internship, and additional work in Swift, Python, and data tooling through independent projects.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#experience">View experience</a>
+            <a class="btn btn-ghost" href="#projects">See projects</a>
           </div>
         </div>
-        <div id="threeD-container"></div>
+        <a class="hero-scroll wrap" href="#about">Scroll</a>
       </section>
 
-      <script src="components/three.r134.min.js"></script>
-      <script src="components/vanta.fog.min.js"></script>
-      <script src="components/background.js"></script>
-
-      <section id="skill" class="skills">
-        <h2><u>My Skills</u></h2>
-        <div class="skill_description">
-          <div class="grow skill_cell" data-aos="fade-up">
-            <img src="images/skills_symbols/icons8-bell-curve-96.png">
-            <h3>Data Science</h3>
-            <p>I love to apply data science concepts, leveraging math, coding, and analytics to extract insights, build models, and solve complex problems.</p>
+      <section id="about" class="about reveal">
+        <div class="wrap about-grid">
+          <div class="about-visual">
+            <div class="about-accent" aria-hidden="true"></div>
+            <figure class="about-frame">
+              <img src="images/IMG_6049.jpg" alt="Portrait of Myles Grant">
+            </figure>
           </div>
-          <div class="grow skill_cell" data-aos="fade-up">
-            <img src="images/skills_symbols/icons8-backend-100.png">
-            <h3>Full-Stack Development</h3>
-            <p>I have built a number of full-stack software applications in Django, Flask, and React, and am constantly improving my skills in those frameworks.</p>
+          <div class="about-body">
+            <p class="section-label">About</p>
+            <h2 class="section-title">Overview</h2>
+            <p>
+              I am a junior software engineer at Allied Solutions in Carmel, Indiana, where I build and maintain REST APIs used for digital verification of automobile and homeowner insurance policies. Responsibilities encompass AWS integrations, observability tooling, modernization of legacy .NET components, and delivery through Harness-based CI/CD in an Agile environment.
+            </p>
+            <p>
+              I earned a Bachelor of Science in Computer Science from Boston College (Morrissey College of Arts and Sciences) in May 2025, with Dean&apos;s List First Honors in multiple semesters. Before joining Allied full time I served as a student programmer with Boston College Information Technology Services, contributing Django and PostgreSQL applications deployed to institutional requirements.
+            </p>
+            <p>
+              I maintain an ongoing interest in data-oriented work beyond my primary role. Alumni, colleagues in software engineering, or others wishing to collaborate may reach out through the links at the bottom of this page.
+            </p>
           </div>
-          <div class="grow skill_cell" data-aos="fade-up">
-            <img src="images/skills_symbols/icons8-math-96.png">
-            <h3>Mathematical Foundations</h3>
-            <p>Through courses like Linear Algebra, Abstract Math, and Multivariable Calculus, along with CS coursework, I've built strong math skills.</p>
-          </div>
-        </div>
-        <div class="skill_container">
-          <div data-aos="fade-right"><img class="grow" src="images/skills_symbols/icons8-python-144.png"></div>
-          <div data-aos="fade-right"><img class="grow" src="images/skills_symbols/icons8-java-144.png"></div>
-          <div data-aos="fade-right"><img class="grow" src="images/skills_symbols/numpy.png"></div>
-          <div data-aos="fade-right"><img class="grow" src="images/skills_symbols/docker.webp"></div>
-          <div data-aos="fade-left"><img class="grow" src="images/skills_symbols/icons8-django-150.png"></div>
-          <div data-aos="fade-left"><img class="grow" src="images/skills_symbols/git.png"></div>
-          <div data-aos="fade-left"><img class="grow" src="images/skills_symbols/js.webp"></div>
-          <div data-aos="fade-left"><img class="grow" src="images/skills_symbols/matplot.png"></div>
         </div>
       </section>
-      
-      <div id="projects" class="bottom">
-        <section class="project_container" data-aos="zoom-in">
-        <h2>Projects</h2>
-        <ul class="gallery">
-          <li style="background-color: #FFF;">
-            <h3>EagleVision</h3>
-            <br>
-            <p>
-              Problem: Course reigstration is a nightmare for college students, and knowing when classes have spots open up is a guess-and-check process.
-              <br><br>Solution: EagleVision is a Django web-app that uses the EagleApp API to allow students from Boston College to set course watchesa and receive notifications about courses.
-            </p>
-            <br>
-            <div class="img-and-a-container">
-              <a href="https://youtu.be/Y0d7v82vbuQ"><b>Check it out here</b></a>
-            </div>
-            <br>
-            <div class="img-and-a-container">
-              <img src="images/EagleVision.png" alt="">
-            </div>
-          </li>
-          <li style="background-color: #FFF;">
-            <h3>BC Marketplace</h3>
-            <br>
-            <p>
-              Problem: Other marketplace options are largely unsafe and not tailored towards the BC Community.
-              <br><br>Solution: BC Marketplace allows verified community members at Boston College to buy, list, and sell items they no longer use.
-            </p>
-            <br>
-            <div class="img-and-a-container">
-              <a href="https://mylesgrxnt.pythonanywhere.com/"><b>Check it out here</b></a>
-            </div>
-            <br>
-            <div class="img-and-a-container">
-              <img src="images/BCMarketplace.png" alt="">
-            </div>
-          </li>
-          <li style="background-color: #FFF;">
-            <h3>GradConnect</h3>
-            <br>
-            <p>
-              Problem: High School seniors often have no way to know what to expect for college applications and have no way to get firsthand accounts of what to expect at college.
-              <br><br>Solution: A full-stack React social media web application that allows high school seniors to connect with college mentors to offer guidance.
-            </p>
-            <br>
-            <div class="img-and-a-container">
-              <a href="https://github.com/mylesgrxnt/GradConnect"><b>Check it out here</b></a>
-            </div>
-            <br>
-            <div class="img-and-a-container">
-              <img src="images/GradConnect.png" alt="">
-            </div>
-          </li>
-          <li style="background-color: #FFF;">
-            <h3>Automated Canvas Reminder</h3>
-            <br>
-            <p>
-              Problem: Canvas sends out automated email reminders daily for classes and assignments, but not until 6 PM, which is too late to be meaningful.
-              <br><br>Solution: A custom automated emailing system that makes use of python and the CanvasAPI to send reminders everyday at 8 AM.
-            </p>
-            <br>
-            <div class="img-and-a-container">
-              <a href="https://github.com/mylesgrxnt/canvas-reminder"><b>Check it out here</b></a>
-            </div>
-            <br>
-            <div class="img-and-a-container">
-              <img src="images/canvas.jpeg" alt="">
-            </div>
-          </li>
-          <li style="background-color: #FFF;">
-            <h3>Terminal Wordle</h3>
-            <br>
-            <p>
-              Problem: The popular game Wordle requires an internet connection AND a browser to play.
-              <br><br>Solution: Using Java, get game information in the form of a csv file and create a version of Wordle that is played (in color) in the terminal.
-            </p>
-            <br>
-            <div class="img-and-a-container">
-              <a href="https://github.com/mylesgrxnt/TerminalWordle"><b>Check it out here</b></a>
-            </div>
-            <br>
-            <div class="img-and-a-container">
-              <img src="images/wordle.png" alt="">
-            </div>
-          </li>
-        </ul>
-        </section>
-      </div>
 
-      <div id="contact" class="contact">
-        <p>
-          Phone: 317-832-2121
-        </p>
-        <p>
-          Email: mylesmgrant@gmail.com
-        </p><p><a href="images/resume.pdf">Resume</a></p>
-        <p><a href="https://www.github.com/mylesgrxnt"><b>Github</b></a></p>
-        <p><a href="https://www.linkedin.com/in/myles-grant-bccs/"><b>LinkedIn</b></a></p>
-      </div>
+      <section id="experience" class="experience reveal">
+        <div class="wrap">
+          <p class="section-label">Career</p>
+          <h2 class="section-title">Experience</h2>
+          <div class="timeline" role="list">
+            <article class="timeline-item" role="listitem">
+              <div class="timeline-date">May 2025 – Present</div>
+              <div class="timeline-body">
+                <h3>Software Engineer (Junior)</h3>
+                <p class="timeline-org">Allied Solutions · Carmel, IN</p>
+                <p>
+                  I design and develop REST APIs in C# and .NET on AWS supporting digital verification of vehicle and mortgage insurance policies. Typical volume exceeds fifty thousand requests per week across integrated services. Responsibilities additionally include configuring AWS-associated monitoring via CloudWatch and Datadog; refactoring legacy .NET applications; implementing Harness-based CI/CD pipelines; and participating in Agile sprint planning, code review, and backlog refinement.
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item" role="listitem">
+              <div class="timeline-date">Aug 2024 – May 2025</div>
+              <div class="timeline-body">
+                <h3>Student Programmer</h3>
+                <p class="timeline-org">Boston College ITS · Chestnut Hill, MA</p>
+                <p>
+                  Developed internal tools using Python, Django, and PostgreSQL subject to ITS compliance validation. Contributed to authentication modernization efforts aligned with Boston College Single Sign-On for deployments relied upon by approximately twelve thousand users across instructional and administrative workloads.
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item" role="listitem">
+              <div class="timeline-date">May 2024 – Aug 2024</div>
+              <div class="timeline-body">
+                <h3>SDET Intern</h3>
+                <p class="timeline-org">Allied Solutions · Carmel, IN</p>
+                <p>
+                  Implemented automated regression and integration suites across multiple repositories with UiPath, Cypress, and JavaScript under Agile SaaS-release timing. Produced internal documentation subsequently adopted broadly; assisted with rollout of automated static-analysis review tooling deployed across fifty or more repositories.
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item" role="listitem">
+              <div class="timeline-date">May 2025</div>
+              <div class="timeline-body">
+                <h3>B.S. Computer Science</h3>
+                <p class="timeline-org">Boston College · Morrissey College of Arts and Sciences</p>
+                <p>
+                  Dean&apos;s List: First Honors in multiple semesters. Coursework emphasized data structures, algorithms, software engineering, computer systems, web development, and data science foundations.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="highlights" class="highlights reveal">
+        <div class="wrap">
+          <p class="section-label">Highlights</p>
+          <h2 class="section-title">What I&apos;m up to</h2>
+          <div class="bento">
+            <article class="bento-card bento-card--lead">
+              <div class="bento-icon" aria-hidden="true">⚡</div>
+              <h3>Current role — Allied Solutions</h3>
+              <p>
+                Production REST APIs using C# and .NET on AWS for insurance-policy verification workloads. Operational monitoring through CloudWatch and Datadog supports reliability and remediation. Participation in modernization initiatives for longstanding .NET clients; Harness-managed deployment pipelines under Agile sprint structure.
+              </p>
+            </article>
+            <article class="bento-card bento-card--scholar">
+              <div class="bento-icon" aria-hidden="true">🎓</div>
+              <h3>Honors &amp; scholarships</h3>
+              <p>
+                Fulbright English Teaching Assistant program — semifinalist. Dean&apos;s List: First Honors in multiple semesters at Boston College.
+                Partner Engineering and Science Scholar.
+              </p>
+            </article>
+            <article class="bento-card bento-card--hackathon">
+              <div class="bento-icon" aria-hidden="true">🏅</div>
+              <h3>Hackathons</h3>
+              <p>
+                First place (2024), Best Use of Auth0, and runner-up (2025). Work included team-based full-stack builds and Auth0 integrations against weekend deadlines.
+              </p>
+            </article>
+            <article class="bento-card bento-card--astro">
+              <div class="bento-icon" aria-hidden="true">🔭</div>
+              <h3>Research — Journal of Double Star Observations</h3>
+              <p>
+                I am drafting a manuscript for the Journal of Double Stars examining observational double-star binaries: catalog ingestion, orbital parameter estimation against noisy observational inputs, and comparison with computational expectations. Submission remains in progress pending further analysis and revisions.
+              </p>
+            </article>
+            <article class="bento-card bento-card--music">
+              <div class="bento-icon" aria-hidden="true">🎻</div>
+              <h3>Music</h3>
+              <p>
+                I play the violin and the guitar. Performing and practice are a steady counterpart to technical work: repertoire, timing, and refining performance through repetition.
+              </p>
+            </article>
+            <article class="bento-card bento-card--play">
+              <div class="bento-icon" aria-hidden="true">🎲</div>
+              <h3>Outside of work</h3>
+              <p>
+                I play ice hockey in local recreational leagues. I also pursue tabletop strategy gaming with peers, including heavier Euro-style board games.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="skills reveal">
+        <div class="wrap">
+          <p class="section-label">Stack</p>
+          <h2 class="section-title">Skills &amp; tools</h2>
+          <p class="skills-intro">
+            Professional development work centers on Microsoft and AWS platforms. I also apply Python web frameworks, databases, and complementary mobile development in Swift based on project context.
+          </p>
+          <div class="skill-pillars">
+            <article class="skill-pillar">
+              <h3>Backend &amp; cloud</h3>
+              <p>C#, .NET, REST services on AWS including Lambda, DynamoDB, SQS, SNS, and CloudWatch; Datadog instrumentation; Microsoft SQL Server; Harness for continuous delivery; Git; Agile-based planning and release practices.</p>
+            </article>
+            <article class="skill-pillar">
+              <h3>Python, Swift &amp; full-stack</h3>
+              <p>Python with Django and Flask; PostgreSQL and MongoDB; containerized deployment with Docker. Swift and iOS development for client applications. Institutional-scale deployments from prior Boston College ITS responsibilities.</p>
+            </article>
+            <article class="skill-pillar">
+              <h3>Testing &amp; analytics</h3>
+              <p>JavaScript and Java as required by project stack; Cypress and UiPath for automation; Postman for API validation. Python tooling for analysis: pandas, scikit-learn, NumPy, and Matplotlib applied in academic and research-oriented work.</p>
+            </article>
+          </div>
+          <div class="skill-tags" aria-label="Technologies">
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">.NET</span>
+            <span class="skill-tag">Swift</span>
+            <span class="skill-tag">iOS</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Cypress</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">CI/CD</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects reveal">
+        <div class="wrap">
+          <p class="section-label">Work</p>
+          <h2 class="section-title">Projects</h2>
+          <p class="projects-subheading">Highlighted projects</p>
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-media">
+                <img src="images/EagleVision.png" alt="EagleVision app screenshot" loading="lazy" width="800" height="500">
+              </div>
+              <div class="project-body">
+                <p class="project-meta">Python · Django · PostgreSQL · Docker</p>
+                <h3>EagleVision</h3>
+                <p>
+                  Web application for course seat monitoring, wait-list registration, and email notification when seats become available. Deployed for broad use by Boston College IT to support student and faculty enrollment processes.
+                </p>
+                <a class="project-link" href="https://youtu.be/Y0d7v82vbuQ" target="_blank" rel="noopener noreferrer">Watch demo</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-media project-media--embed">
+                <iframe
+                  title="BC Marketplace — Swift iOS app demo (clip)"
+                  width="560"
+                  height="315"
+                  loading="lazy"
+                  src="https://www.youtube.com/embed/4bXNOEbDKeA?start=247&amp;end=275"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="project-body">
+                <p class="project-meta">Swift · iOS</p>
+                <h3>BC Marketplace</h3>
+                <p>
+                  Native Swift iOS marketplace for verified Boston College students and faculty. Supports listing, discovery, and informal exchange within the campus community rather than unverified third-party marketplaces. Demo clip available on YouTube.
+                </p>
+                <a class="project-link" href="https://www.youtube.com/watch?v=4bXNOEbDKeA&amp;t=247s" target="_blank" rel="noopener noreferrer">Open on YouTube</a>
+              </div>
+            </article>
+          </div>
+
+          <p class="projects-subheading">Additional projects</p>
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-media placeholder" aria-hidden="true">
+                <div class="project-placeholder-inner">
+                  <span class="emoji" aria-hidden="true">🔬</span>
+                  <span class="label">Materials &amp; ML</span>
+                </div>
+              </div>
+              <div class="project-body">
+                <p class="project-meta">Python · scikit-learn · NumPy · pandas</p>
+                <h3>Crystal structure prediction</h3>
+                <p>
+                  Machine learning study predicting crystal lattice characteristics from materials properties using Materials Project datasets, with comparison to density-functional-theory reference values. Implemented in Python using scikit-learn, NumPy, and pandas.
+                </p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-media">
+                <img src="images/GradConnect.png" alt="GradConnect screenshot" loading="lazy" width="800" height="500">
+              </div>
+              <div class="project-body">
+                <p class="project-meta">React · Full-stack</p>
+                <h3>GradConnect</h3>
+                <p>
+                  React-based web application connecting prospective college students with mentors for guidance on applications and campus life. Implemented as a portfolio-scale full-stack exercise; source available on GitHub.
+                </p>
+                <a class="project-link" href="https://github.com/mylesgrxnt/GradConnect" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-media">
+                <img src="images/canvas.jpeg" alt="Canvas reminder illustration" loading="lazy" width="800" height="500">
+              </div>
+              <div class="project-body">
+                <p class="project-meta">Python · Automation</p>
+                <h3>Automated Canvas reminders</h3>
+                <p>
+                  Scheduled Python integration with the Canvas LMS API to dispatch course and assignment reminders earlier in the morning than default Canvas notifications, improving practical usability for deadline awareness.
+                </p>
+                <a class="project-link" href="https://github.com/mylesgrxnt/canvas-reminder" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-media">
+                <img src="images/wordle.png" alt="Terminal Wordle" loading="lazy" width="800" height="500">
+              </div>
+              <div class="project-body">
+                <p class="project-meta">Java · CLI</p>
+                <h3>Terminal Wordle</h3>
+                <p>
+                  Command-line Wordle implementation in Java using dictionary data from CSV input, with terminal color output for correctness feedback. Intended for environments without continuous browser connectivity.
+                </p>
+                <a class="project-link" href="https://github.com/mylesgrxnt/TerminalWordle" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact" class="contact reveal">
+        <div class="contact-inner">
+          <p class="section-label">Contact</p>
+          <h2 class="section-title">Contact</h2>
+          <p class="contact-lede">
+            For inquiries related to collaboration, recruiting, alumni networking, or professional connections, please use the links below. Email correspondence is preferred for initial outreach.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:mylesmgrant@gmail.com">Email</a>
+            <a href="https://www.github.com/mylesgrxnt" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/myles-grant-SWE/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="images/resume.pdf">Résumé</a>
+            <a href="tel:+13178322121">Phone</a>
+          </div>
+          <p class="contact-fine">© Myles Grant. Static site; hand-maintained markup and stylesheet without third-party tracking scripts.</p>
+        </div>
+      </footer>
     </main>
   </body>
 </html>
