@@ -83,7 +83,7 @@ img {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 10006;
   padding: 0.75rem var(--space);
   padding-top: max(0.75rem, env(safe-area-inset-top));
   background: linear-gradient(to bottom, rgba(250, 246, 241, 0.94), rgba(250, 246, 241, 0.65));
@@ -134,19 +134,85 @@ img {
   color: var(--text);
 }
 
-.nav-mobile {
+/* Full-screen mobile menu (outside header — fixed descendants use the viewport correctly). */
+
+.nav-mobile-backdrop {
   display: none;
   position: fixed;
   inset: 0;
-  top: 4.25rem;
-  padding: 1rem var(--space) max(1.5rem, env(safe-area-inset-bottom));
-  background: rgba(250, 246, 241, 0.98);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-top: 1px solid var(--stroke);
-  flex-direction: column;
-  gap: 0.25rem;
-  box-shadow: var(--shadow-sm);
+  z-index: 10004;
+  background: var(--bg-deep);
+}
+
+.nav-mobile {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  /* Backdrop fades in; stays in the tree so transitions run (no display toggling). */
+  .nav-mobile-backdrop {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+      visibility 0.4s;
+  }
+
+  body.mobile-menu-open .nav-mobile-backdrop {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  /* Outer holds the sheet paint + animation; passes pointer-events to backdrop except on .nav-mobile-inner links. */
+  .nav-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    visibility: hidden;
+    pointer-events: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: calc(4rem + env(safe-area-inset-top, 0px));
+    bottom: 0;
+    z-index: 10005;
+    gap: 0;
+    overflow: hidden;
+    background: var(--bg-card);
+    border-top: 1px solid var(--stroke);
+    box-shadow: var(--shadow-sm);
+    transform: translate3d(0, -104%, 0);
+    opacity: 0;
+    transition:
+      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+      visibility 0.45s;
+  }
+
+  .nav-mobile-inner {
+    pointer-events: auto;
+    flex: 0 1 auto;
+    max-height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 1rem;
+    padding-bottom: max(1.25rem, env(safe-area-inset-bottom));
+    padding-inline: max(var(--space), env(safe-area-inset-left)) max(var(--space), env(safe-area-inset-right));
+  }
+
+  body.mobile-menu-open .nav-mobile {
+    visibility: visible;
+    pointer-events: none;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
 .menu-toggle {
@@ -193,32 +259,27 @@ img {
   top: 6px;
 }
 
-.site-header.menu-open .menu-toggle span {
+body.mobile-menu-open .site-header .menu-toggle span {
   background: transparent;
 }
 
-.site-header.menu-open .menu-toggle span::before {
+body.mobile-menu-open .site-header .menu-toggle span::before {
   top: 0;
   transform: rotate(45deg);
 }
 
-.site-header.menu-open .menu-toggle span::after {
+body.mobile-menu-open .site-header .menu-toggle span::after {
   top: 0;
   transform: rotate(-45deg);
-}
-
-
-.site-header.menu-open .nav-mobile {
-  display: flex;
 }
 
 .nav-mobile a {
   display: flex;
   align-items: center;
-  min-height: 2.75rem;
+  min-height: 2.85rem;
   font-size: 1.05rem;
   font-weight: 500;
-  padding: 0.5rem 0;
+  padding: 0.65rem 0;
   border-bottom: 1px solid var(--stroke);
   color: var(--text-muted);
 }
@@ -238,6 +299,23 @@ img {
 
   .nav-mobile {
     display: none !important;
+  }
+
+  .nav-mobile-backdrop {
+    display: none !important;
+    pointer-events: none !important;
+  }
+
+  body.mobile-menu-open {
+    overflow: auto !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-mobile-backdrop,
+  .nav-mobile {
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
   }
 }
 
