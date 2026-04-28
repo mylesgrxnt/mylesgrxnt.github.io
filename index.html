@@ -35,7 +35,12 @@
           </button>
         </nav>
       </div>
-      <div id="mobile-nav" class="nav-mobile" aria-hidden="true">
+    </header>
+    <!-- Fixed overlays live outside header so viewport positioning is correct (ancestor backdrop-filter would trap fixed descendants). -->
+    <div id="nav-mobile-backdrop" class="nav-mobile-backdrop" aria-hidden="true"></div>
+    <div id="mobile-nav" class="nav-mobile" aria-hidden="true">
+      <!-- Inner catches taps/links; outer sheet is pointer-transparent so taps fall through to the backdrop -->
+      <div class="nav-mobile-inner">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#highlights">Highlights</a>
@@ -43,7 +48,7 @@
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
-    </header>
+    </div>
 
     <main id="top">
       <section id="landing" class="hero" aria-label="Introduction">
